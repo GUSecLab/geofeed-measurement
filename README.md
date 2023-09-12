@@ -1,6 +1,7 @@
-# rahel-dissertation-research
-Dissertation research about geofeeds, commercial IP-geolocation (and possibly geoblocking too). 
-
+# geofeed-measurement
+This is the public artifact repository for Rahel Fainchtein's dissertation titled:
+__No Sieve is Good Enough: Examining the Creation, Enforcement and Evasion of Geofilters__.
+It contains the scripts used to collect and analyze both geofeed data and the contents of the databases underlying the two commercial IP-geolocation providers examined (i.e. Maxmind-GeoIP2, Maxmind GeoLite2, IPgeolocation.io). 
 
 ## Repository File Structure ##
 * __Data__ : Data files pulled from geofeeds and commercial IP-geolocation service databases (maintained using LFS- see below for details)
@@ -79,3 +80,6 @@ and then
 `apt-get install git-lfs`
 
 
+## Using this artifact:
+If you use the scripts and/or data in this repository please use the following citation:
+Fainchtein, Rahel A. _No Sieve is Good Enough: Examining the Creation, Enforcement and Evasion of Geofilters_. 2023. Georgetown University, PhD Dissertation.  
