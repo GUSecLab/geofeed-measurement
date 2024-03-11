@@ -1,0 +1,1 @@
+Data/raw_data/geofeed_pulls/*.csv filter=lfs diff=lfs merge=lfs -text
