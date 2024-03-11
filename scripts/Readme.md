@@ -8,7 +8,7 @@
 	- `pull-ipgeolocation-io.sh`: pulls new releases of the ipgeolocation.io ip-city-isp database contents as both .csv and .mmdb files
 
 	- _geofeed-finder-linux-x64_ (Note: This file is not part of the repo but is necessary for pulling geofeeds - and the bash scripts assume it is located in this directory.)
-					For this project I used the Linux executable from release v1.5.0 for geofeed collections pulled between April 2022 - January 2023, release v1.7.0 from January 2023-June 2023, release 1.10 from June 2023-August 2023 and release 1.11 from September 2023 onward.
+					For this project I used the Linux executable from release v1.5.0 for geofeed collections pulled between April 2022 - January 2023, release v1.7.0 from January 2023-June 2023, release 1.10 from June 2023-August 2023, release 1.11 from September 2023 - December 2023 and release 1.11.1 from December 2023 onward.
 
 	- **pythonScripts** :  Though all written in Python the scripts in this subfolder can be grouped by functionality as follows:
 		- Data Collection scripts: _ These were generally invoked by the bash scripts (see above)_
@@ -17,12 +17,21 @@
 			- `processCymruASNs.py`: compile IP prefix-ASN mappings given by `cymru-asnmap.py` outputs for geofeeds and console outputs within a pre-specified date range, calculate the number of unique ASNs in each file assessed and output dataFrame of results for easy graphing.
 			- `IpCoverageCalculator.py`: Python class - supports calculation of a geofeed's IPv4 space coverage
 			- `calc_commercial_ip_coverage.py`: calculates the IPv4 address space coverage of each of the DB pulls collected for the commercial provider specified.
+
                         - `tallyAddresses.py`:  Calculates IPv4 space coverage of geofeed results over time. 
 			- `compare_geolocation.py`: Finds which IPv4 prefixes are shared between a single geofeed output and a commercial IP-geolocation update/dataset pulled at roughly the same time. Assesses level of agreement between geolocation information given by geofeed and commercial dataset for each of the overlapping IP ranges.
+
                         -  `measure_geoloc_distance.py`: Removes duplicate overlapping geofeed/commercial CIDR pairings, computes the (estimated) pairwise geodesic distance between disagreeing/mismatching location names 
 
+			- `normalize_by_baseVals.py`: Normalizes Country-wise geofeed opt-in in IPv4 addresses by the number or Internet users as given by the 2023 CIA World Factbook and by Country-wise Pv4 address allocation.
+			- `calc_commercial_ip_coverage.py`: Calculates IPv4 address coverage for a specific Maxmind GeoIP2 or Ipgeolocation.io DB pull.
+
+			- `join-analyzeCymruASdb.py`: Maps Cymru ASN mappings to overlapping classifications from the Stanford ASDB. After joining gets Country-wise AS distributions by category. 
+
+  
 		- Data Visualization/graphing:
 			- `plotmockups.py`: Synthesizes results frame written by `measure_geoloc_distance.py` into a bird's eye view of the comparison metrics over time, graphs the results. This script also contains several additional graphing functions which were run through the ipython augmented interactive console.
+			- `buildHeatMap.py`: Functions to read in country-wise datasets and to plot them as geographic heatmaps. Note that this script does not have a `main()` function and will therefore need to be run in an interactive python console.
 
 
 		- Unused/Deprecated Scripts: _scripts that are not needed in the repo and will likely be removed at a later revision
