@@ -1,0 +1,2 @@
+network,geoname_id,registered_country_geoname_id,represented_country_geoname_id,is_anonymous_proxy,is_satellite_provider,postal_code,latitude,longitude,accuracy_radius
+0.0.0.0/24,2158177,2077456,,0,0,3064,-37.5297,144.9586,1000
