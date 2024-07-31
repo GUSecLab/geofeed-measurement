@@ -262,3 +262,5 @@ Data/raw_data/geofeed-pulls/03.13.2023-result.csv filter=lfs diff=lfs merge=lfs 
 Data/raw_data/geofeed-pulls/03.24.2023-geofeedConsole.csv filter=lfs diff=lfs merge=lfs -text
 Data/raw_data/geofeed-pulls/11.28.2023-geofeedConsole.csv filter=lfs diff=lfs merge=lfs -text
 Data/cleaned_data/ipv4-geofeed-records/03.28.2024-ipv4-result.csv filter=lfs diff=lfs merge=lfs -text
+Data/cleaned_data/geofeed-srcs-withCIDRs/gfeed_asn_metrics/04.02.2022-05.17.2024_consoleGfeed_AsnComparison.csv filter=lfs diff=lfs merge=lfs -text
+Data/cleaned_data/geofeed-srcs-withCIDRs/gfeed_asn_metrics/04.02.2022-07.30.2024_consoleGfeed_AsnComparison.csv filter=lfs diff=lfs merge=lfs -text
